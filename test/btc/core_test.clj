@@ -2,6 +2,7 @@
   (:require [clojure.test :refer :all]
             [btc.core :refer :all]))
 
-(deftest a-test
+(deftest test-magic
   (testing "FIXME, I fail."
-    (is (= 0 1))))
+    (is (= (:magic-no (read-block "../data/blk00000.dat" 293))
+           3652501241))))
